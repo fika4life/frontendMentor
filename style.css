@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color:
+    hsl(235, 21%, 11%);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px; 
+    
+}
+
+header{
+    
+    background-image: url('./images/bg-desktop-dark.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+   
+}
+
+
+main{
+    margin: 60px auto;
+    max-width: 40%;
+    top: 100px;
+    
+    
+    
+}
+
+.heading{
+    display: flex;
+    justify-content: space-between;
+}
+
+.heading h1{
+    color: #fff;
+    font-size: 3rem;
+    letter-spacing: 20px;
+    font-weight: 600;
+
+
+}
+
+.todo-app {
+    margin-top: 40px;
+    padding: 10px;
+}
+
+.todo-form input{
+    background-color: hsl(235, 24%, 19%);  
+    padding: 16px;
+    width: 100%;
+}
+
+.todos{
+    margin-top: 30px;
+    color: hsl(234, 39%, 85%);
+    background-color: hsl(235, 24%, 19%);  
+}
+
+.todo-item{
+    border-bottom: 1px solid  hsl(233, 14%, 35%);
+    padding: 16px;
+}
+
+.summary-section  {
+    display:flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.filters{
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.filters p{
+    margin-right: 20px;
+}
