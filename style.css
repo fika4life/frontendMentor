@@ -1,86 +1,142 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&display=swap");
+
+:root {
+/* primary */
+  --bright-blue: hsl(220, 98%, 61%);
+  --check-background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+
+  /* light theme */
+  --very-light-gray: hsl(0, 0%, 98%);
+  --very-light-grayish-blue: hsl(236, 33%, 92%);
+  --light-grayish-glue: hsl(233, 11%, 84%);
+  --dark-grayish-glue: hsl(236, 9%, 61%);
+  --very-dark-grayish-blue: hsl(235, 19%, 35%);
+
+  /* dark theme */
+  --very-dark-blue: hsl(235, 21%, 11%);
+  --very-dark-desaturated-blue: hsl(235, 24%, 19%);
+  --light-grayish-blue: hsl(234, 39%, 85%);
+  --light-grayish-blue: hsl(236, 33%, 92%); /*  hover */
+  --dark-grayish-blue: hsl(234, 11%, 52%);
+  --very-dark-grayish-blue: hsl(233, 14%, 35%);
+  /* --very-dark-grayish-blue: hsl(237, 14%, 26%); */
+
+  --border-radius: 4px;
+  --box-shadow:1px 7px 17px 4px rgba(0,0,0,0.41);
+
+}
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    background-color:
-    hsl(235, 21%, 11%);
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 18px; 
-    
-}
-
-header{
-    
-    background-image: url('./images/bg-desktop-dark.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 300px;
-   
+body {
+  background-color: var(--very-dark-blue);
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
+  background-image: url("./images/bg-desktop-dark.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100% 300px;
 }
 
 
-main{
-    margin: 60px auto;
-    max-width: 40%;
-    top: 100px;
-    
-    
-    
+
+main {
+  margin: 60px auto;
+  max-width: 40%;
+  top: 100px;
 }
 
-.heading{
-    display: flex;
-    justify-content: space-between;
+.heading {
+  display: flex;
+  justify-content: space-between;
 }
 
-.heading h1{
-    color: #fff;
-    font-size: 3rem;
-    letter-spacing: 20px;
-    font-weight: 600;
-
-
+.heading h1 {
+  color: #fff;
+  font-size: 3rem;
+  letter-spacing: 20px;
+  font-weight: 600;
 }
 
 .todo-app {
-    margin-top: 40px;
-    padding: 10px;
+  margin-top: 40px;
+  padding: 10px;
 }
 
-.todo-form input{
-    background-color: hsl(235, 24%, 19%);  
-    padding: 16px;
-    width: 100%;
+.todo-form{
+  position: relative;
 }
 
-.todos{
-    margin-top: 30px;
-    color: hsl(234, 39%, 85%);
-    background-color: hsl(235, 24%, 19%);  
+.todo-form input {
+  background-color: var(--very-dark-desaturated-blue);
+  padding: 20px;
+  width: 100%;
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  font-family: inherit;
+  font-size: 18px;
+  padding-left: 60px;
+  color:var(--light-grayish-blue);;
+  
 }
 
-.todo-item{
-    border-bottom: 1px solid  hsl(233, 14%, 35%);
-    padding: 16px;
+.todos {
+  margin-top: 30px;
+  color: var(--light-grayish-blue);
+  background-color: var(--very-dark-desaturated-blue);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
 }
 
-.summary-section  {
-    display:flex;
-    justify-content: space-between;
-    padding: 20px;
-}
-.filters{
-    display: flex;
-    justify-content: space-between;
-   
+.todo-item {
+  border-bottom: 0.5px solid var(--very-dark-grayish-blue);
+  padding: 24px 40px;
 }
 
-.filters p{
-    margin-right: 20px;
+input[type="checkbox"]{
+  visibility: hidden;
+
 }
+
+.checkbox-circle{
+  z-index: 2;
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  top: 16px;
+  left: 16px;
+  border-radius: 50%;
+  border: 1px solid var(--dark-grayish-blue);
+
+}
+
+
+.summary-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  color: var(--very-dark-grayish-blue);
+}
+ul.filters {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+
+
+.filters li {
+  margin-right: 20px;
+}
+
+main > p {
+  text-align: center;
+  color: var(--very-dark-grayish-blue);
+  padding-top: 40px;
+}
+s

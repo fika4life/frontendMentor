@@ -1,57 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
-  <title>Frontend Mentor | Todo app</title>
-
-  
-</head>
-<body>
-  <header></header>
-  <main>
-    <section class="heading">
-      <h1>TODO</h1>
-      <span class='toggle-mode-icon'><img src="./images/icon-sun.svg" alt="Sun icon"></span>
-
-    </section>
-    <div class="todo-app">
-      <form class="todo-form">
-        <input type="text" name="new-todo" id="new-todo" placeholder="Create a new todo">
-      </form>
-      <div class="todos">
-        <div class="todo-item">
-          <input type="checkbox" name="" id=""> Jog around the park
-        </div>
-        <div class="todo-item">
-          <input type="checkbox" name="" id=""> qigong 15 minutes
-        </div>
-        <div class="todo-item">
-          <input type="checkbox" name="" id=""> learn spanish
-        </div>
-        <div class="summary-section">
-          <span class="info">3 items left</span>
-          <div class="filters">
-            <p>All</p>
-            <p>Active</p>
-            <p>Completed
-            </p>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Todo app</title>
+  </head>
+  <body>
+    <main>
+      <section class="heading">
+        <h1>TODO</h1>
+        <span class="toggle-mode-icon"
+          ><img src="./images/icon-sun.svg" alt="Sun icon"
+        /></span>
+      </section>
+      <div class="todo-app">
+        <form class="todo-form">
+          <span class="checkbox-circle"></span>
+          <input
+            type="text"
+            name="new-todo"
+            id="new-todo"
+            placeholder="Create a new todo..."
+            autocomplete="off"
+          />
+        </form>
+        <div class="todos">
+          <div class="todo-item">
+            <input type="checkbox" name="" class="" /> Jog around the park
           </div>
-          <p class="clear">Clear completed</p>
+          <div class="todo-item">
+            <input type="checkbox" name="" class="" /> qigong 15 minutes
+          </div>
+          <div class="todo-item">
+            <input type="checkbox" name="" class="completed" />
+            learn spanish
+          </div>
+          <div class="summary-section">
+            <span class="info">3 items left</span>
+            <ul class="filters">
+              <li>All</li>
+              <li>Active</li>
+              <li>Completed</li>
+            </ul>
+            <p class="clear">Clear completed</p>
+          </div>
         </div>
-
       </div>
-    </div>
-  </main>
-
-
-
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </footer>
-</body>
+      <p>Drag and drop to reorder list</p>
+    </main>
+  </body>
 </html>
