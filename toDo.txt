@@ -1,0 +1,2 @@
+- Refactor HTML to not include checkboxes but rather UL li structure
+- add classes for completed and hover states for li items

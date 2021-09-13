@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&display=swap");
 
 :root {
-/* primary */
+  /* primary */
   --bright-blue: hsl(220, 98%, 61%);
   --check-background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
 
@@ -22,8 +22,7 @@
   /* --very-dark-grayish-blue: hsl(237, 14%, 26%); */
 
   --border-radius: 4px;
-  --box-shadow:1px 7px 17px 4px rgba(0,0,0,0.41);
-
+  --box-shadow: 1px 7px 17px 4px rgba(0, 0, 0, 0.41);
 }
 
 * {
@@ -41,8 +40,6 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 300px;
 }
-
-
 
 main {
   margin: 60px auto;
@@ -67,8 +64,18 @@ main {
   padding: 10px;
 }
 
-.todo-form{
+.todo-form {
   position: relative;
+}
+.circle {
+  z-index: 2;
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  top: 16px;
+  left: 16px;
+  border-radius: 50%;
+  border: 1px solid var(--dark-grayish-blue);
 }
 
 .todo-form input {
@@ -81,8 +88,7 @@ main {
   font-family: inherit;
   font-size: 18px;
   padding-left: 60px;
-  color:var(--light-grayish-blue);;
-  
+  color: var(--light-grayish-blue);
 }
 
 .todos {
@@ -96,25 +102,15 @@ main {
 .todo-item {
   border-bottom: 0.5px solid var(--very-dark-grayish-blue);
   padding: 24px 40px;
+  position: relative;
 }
 
-input[type="checkbox"]{
+input[type="checkbox"] {
   visibility: hidden;
-
 }
 
-.checkbox-circle{
-  z-index: 2;
-  position: absolute;
-  height: 25px;
-  width: 25px;
-  top: 16px;
-  left: 16px;
-  border-radius: 50%;
-  border: 1px solid var(--dark-grayish-blue);
-
+.circle.completed {
 }
-
 
 .summary-section {
   display: flex;
@@ -128,8 +124,6 @@ ul.filters {
   list-style-type: none;
 }
 
-
-
 .filters li {
   margin-right: 20px;
 }
@@ -139,4 +133,3 @@ main > p {
   color: var(--very-dark-grayish-blue);
   padding-top: 40px;
 }
-s
