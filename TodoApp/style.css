@@ -3,7 +3,7 @@
 :root {
   /* primary */
   --bright-blue: hsl(220, 98%, 61%);
-  --check-background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+  --check-background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
 
   /* light theme */
   --very-light-gray: hsl(0, 0%, 98%);
@@ -67,8 +67,10 @@ main {
 .todo-form {
   position: relative;
 }
-.circle {
+.circle,
+.circle-decoration {
   z-index: 2;
+  display: inline-block;
   position: absolute;
   height: 25px;
   width: 25px;
@@ -76,6 +78,13 @@ main {
   left: 16px;
   border-radius: 50%;
   border: 1px solid var(--dark-grayish-blue);
+  margin-right: 40px;
+  background-color: var(--check-background);
+}
+
+.circle:hover {
+  background-color: var(--check-background);
+  cursor: pointer;
 }
 
 .todo-form input {
@@ -89,27 +98,36 @@ main {
   font-size: 18px;
   padding-left: 60px;
   color: var(--light-grayish-blue);
+  caret-color: var(--bright-blue);
 }
-
+.todo-form input:focus {
+  outline: none;
+}
 .todos {
   margin-top: 30px;
   color: var(--light-grayish-blue);
   background-color: var(--very-dark-desaturated-blue);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
+  list-style-type: none;
 }
 
-.todo-item {
+li.todo-item {
   border-bottom: 0.5px solid var(--very-dark-grayish-blue);
-  padding: 24px 40px;
+  padding: 24px 60px;
   position: relative;
-}
-
-input[type="checkbox"] {
-  visibility: hidden;
+  cursor: pointer;
 }
 
 .circle.completed {
+  background-image: url("images/icon-check.svg"), var(--check-background);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.todo-item.completed {
+  text-decoration: line-through;
+  color: var(--very-dark-grayish-blue);
 }
 
 .summary-section {

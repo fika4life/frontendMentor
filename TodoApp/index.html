@@ -24,7 +24,7 @@
       </section>
       <div class="todo-app">
         <form class="todo-form">
-          <span class="circle"></span>
+          <span class="circle-decoration"></span>
           <input
             type="text"
             name="new-todo"
@@ -33,18 +33,21 @@
             autocomplete="off"
           />
         </form>
-        <div class="todos">
-          <div class="todo-item">
-            <input type="checkbox" name="" class="" /> Jog around the park
-            <div class="circle"></div>
-          </div>
-          <div class="todo-item">
-            <input type="checkbox" name="" class="" /> qigong 15 minutes
-          </div>
-          <div class="todo-item">
-            <input type="checkbox" name="" class="" />
-            learn spanish
-          </div>
+        <ul class="todos">
+          <li class="todo-item completed">
+            <span class="circle completed"></span>
+
+            Jog around the park
+          </li>
+          <li class="todo-item">
+            <span class="circle"></span>
+            Practice coding
+          </li>
+          <li class="todo-item">
+            <span class="circle"></span>
+            Eat vitamins
+          </li>
+
           <div class="summary-section">
             <span class="info">3 items left</span>
             <ul class="filters">
@@ -54,7 +57,7 @@
             </ul>
             <p class="clear">Clear completed</p>
           </div>
-        </div>
+        </ul>
       </div>
       <p>Drag and drop to reorder list</p>
     </main>

@@ -1,2 +1,15 @@
-- Refactor HTML to not include checkboxes but rather UL li structure
-- add classes for completed and hover states for li items
+- figure out how to add gradient to hover state circle
+-add x to delete
+
+-summary section layout 
+    -html  
+    -responsive
+    -filtering
+
+-responsive
+
+
+-drag and drop
+
+
+-switch to light mode
