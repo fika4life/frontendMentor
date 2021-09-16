@@ -130,21 +130,44 @@ li.todo-item {
   color: var(--very-dark-grayish-blue);
 }
 
+.delete {
+  background: url("./images/icon-cross.svg") no-repeat;
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  right: 20px;
+}
+
 .summary-section {
   display: flex;
   justify-content: space-between;
   padding: 20px;
   color: var(--very-dark-grayish-blue);
+  font-size: 14px;
 }
+
 ul.filters {
+  background-color: var(--very-dark-desaturated-blue);
   display: flex;
   justify-content: space-between;
   list-style-type: none;
+  color: var(--very-dark-grayish-blue);
+  font-size: 14px;
+  max-width: 200px;
+  padding: 16px;
 }
 
 .filters li {
   margin-right: 20px;
 }
+
+ul.filters li:hover,
+.clear:hover {
+  color: var(--light-grayish-blue);
+  cursor: pointer;
+}
+
+/* TODO: filter active state */
 
 main > p {
   text-align: center;

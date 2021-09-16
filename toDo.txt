@@ -2,7 +2,7 @@
 -add x to delete
 
 -summary section layout 
-    -html  
+    -html   css grid?
     -responsive
     -filtering
 
