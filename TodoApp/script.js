@@ -18,10 +18,14 @@ function addTodo(e) {
 
 function removeTodo(e) {
   e.preventDefault();
-  console.log("hello");
+  if (e.target.classList.contains("delete")) {
+    e.target.parentElement.remove();
+  }
 }
 
 //eventlisteners
 //get input on submit
 form.addEventListener("submit", addTodo);
-deleteBtn.addEventListener("click", removeTodo);
+
+// event delegation to remove todos
+todosUl.addEventListener("click", removeTodo);
