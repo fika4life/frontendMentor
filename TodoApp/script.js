@@ -10,6 +10,7 @@ function addTodo(e) {
 
   const liElement = document.createElement("li");
   liElement.classList.add("todo-item");
+  liElement.setAttribute("draggable", "true");
   liElement.innerHTML = `<span class="circle"></span>${newTodo}<span class="delete"></span>`;
 
   todosUl.appendChild(liElement);
@@ -23,9 +24,18 @@ function removeTodo(e) {
   }
 }
 
+function markCompleted(e) {
+  if (e.target.classList.contains("circle")) {
+    e.target.classList.toggle("completed");
+    e.target.parentElement.classList.toggle("completed");
+  }
+}
+
 //eventlisteners
 //get input on submit
 form.addEventListener("submit", addTodo);
 
 // event delegation to remove todos
 todosUl.addEventListener("click", removeTodo);
+
+todosUl.addEventListener("click", markCompleted);
