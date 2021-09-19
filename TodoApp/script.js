@@ -4,6 +4,8 @@ let newTodoInput = document.getElementById("new-todo");
 const deleteBtn = document.querySelector(".delete");
 const todosUl = document.querySelector("ul.todos");
 
+//filters
+
 function addTodo(e) {
   e.preventDefault();
   let newTodo = newTodoInput.value;
@@ -37,5 +39,4 @@ form.addEventListener("submit", addTodo);
 
 // event delegation to remove todos
 todosUl.addEventListener("click", removeTodo);
-
 todosUl.addEventListener("click", markCompleted);
