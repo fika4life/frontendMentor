@@ -1,7 +1,5 @@
 - figure out how to add gradient to hover state circle
 
-- add js to check box to strikethrough the text and add checkmark
-
 
 -summary section layout 
     -html   css grid?

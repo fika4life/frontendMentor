@@ -62,6 +62,7 @@ main {
 .todo-app {
   margin-top: 40px;
   padding: 10px;
+  position: relative;
 }
 
 .todo-form {
@@ -80,11 +81,6 @@ main {
   border: 1px solid var(--dark-grayish-blue);
   margin-right: 40px;
   background-color: var(--check-background);
-}
-
-.circle:hover {
-  background-color: var(--check-background);
-  cursor: pointer;
 }
 
 .todo-form input {
@@ -125,6 +121,10 @@ li.todo-item {
   background-position: center;
 }
 
+.circle:not(.completed):hover {
+  border: 1px solid var(--light-grayish-blue);
+}
+
 .todo-item.completed {
   text-decoration: line-through;
   color: var(--very-dark-grayish-blue);
@@ -144,6 +144,7 @@ li.todo-item {
   padding: 20px;
   color: var(--very-dark-grayish-blue);
   font-size: 14px;
+  background-color: var(--very-dark-desaturated-blue);
 }
 
 ul.filters {
@@ -155,6 +156,9 @@ ul.filters {
   font-size: 14px;
   max-width: 200px;
   padding: 16px;
+  position: absolute;
+  bottom: 14px;
+  left: 150px;
 }
 
 .filters li {
@@ -167,7 +171,9 @@ ul.filters li:hover,
   cursor: pointer;
 }
 
-/* TODO: filter active state */
+ul.filters li.selected {
+  color: var(--bright-blue);
+}
 
 main > p {
   text-align: center;
